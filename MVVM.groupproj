@@ -3,10 +3,10 @@
         <ProjectGuid>{681C43E7-5E3C-48B8-A0E2-EDFBDB367D1C}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="ClientesVCL.dproj">
+        <Projects Include="Test\MVVMTests.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="Test\MVVMTests.dproj">
+        <Projects Include="Demo\VLCDemo.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -17,15 +17,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="ClientesVCL">
-        <MSBuild Projects="ClientesVCL.dproj"/>
-    </Target>
-    <Target Name="ClientesVCL:Clean">
-        <MSBuild Projects="ClientesVCL.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="ClientesVCL:Make">
-        <MSBuild Projects="ClientesVCL.dproj" Targets="Make"/>
-    </Target>
     <Target Name="MVVMTests">
         <MSBuild Projects="Test\MVVMTests.dproj"/>
     </Target>
@@ -35,14 +26,23 @@
     <Target Name="MVVMTests:Make">
         <MSBuild Projects="Test\MVVMTests.dproj" Targets="Make"/>
     </Target>
+    <Target Name="VLCDemo">
+        <MSBuild Projects="Demo\VLCDemo.dproj"/>
+    </Target>
+    <Target Name="VLCDemo:Clean">
+        <MSBuild Projects="Demo\VLCDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VLCDemo:Make">
+        <MSBuild Projects="Demo\VLCDemo.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="ClientesVCL;MVVMTests"/>
+        <CallTarget Targets="MVVMTests;VLCDemo"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="ClientesVCL:Clean;MVVMTests:Clean"/>
+        <CallTarget Targets="MVVMTests:Clean;VLCDemo:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="ClientesVCL:Make;MVVMTests:Make"/>
+        <CallTarget Targets="MVVMTests:Make;VLCDemo:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
