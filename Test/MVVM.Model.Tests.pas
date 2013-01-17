@@ -3,7 +3,11 @@ unit MVVM.Model.Tests;
 interface
 
 uses
-  TestFramework, System.Classes, System.SysUtils, MVVM.Model, Test.Model;
+  TestFramework,
+  System.Classes,
+  System.SysUtils,
+  MVVM.Model,
+  Test.Model;
 
 type
   TestTModel = class(TTestCase)

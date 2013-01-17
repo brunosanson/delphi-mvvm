@@ -3,8 +3,12 @@ unit MVVM.Edit.ViewModel.Tests;
 interface
 
 uses
-  TestFramework, System.Classes, Data.DB, System.SysUtils,
-  MVVM.Edit.ViewModel, Test.Model;
+  TestFramework,
+  System.Classes,
+  Data.DB,
+  System.SysUtils,
+  MVVM.Edit.ViewModel,
+  Test.Model;
 
 type
   TEditViewModelTests = class(TTestCase)

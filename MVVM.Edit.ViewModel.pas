@@ -3,7 +3,11 @@ unit MVVM.Edit.ViewModel;
 interface
 
 uses
-  System.SysUtils, System.Classes, Data.DB, MVVM.ViewModel, MVVM.Model;
+  System.SysUtils,
+  System.Classes,
+  Data.DB,
+  MVVM.ViewModel,
+  MVVM.Model;
 
 type
   TEditViewModel = class(TViewModel)

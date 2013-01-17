@@ -3,7 +3,10 @@ unit MVVM.Model;
 interface
 
 uses
-  System.SysUtils, System.Classes, Data.DB, Generics.Collections;
+  System.SysUtils,
+  System.Classes,
+  Data.DB,
+  Generics.Collections;
 
 type
   TModel = class(TDataModule)

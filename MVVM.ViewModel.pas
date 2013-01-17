@@ -3,7 +3,8 @@ unit MVVM.ViewModel;
 interface
 
 uses
-  System.SysUtils, System.Classes;
+  System.SysUtils,
+  System.Classes;
 
 type
   TViewModel = class(TDataModule)

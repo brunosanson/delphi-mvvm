@@ -3,7 +3,12 @@ unit Test.Model;
 interface
 
 uses
-  System.SysUtils, System.Classes, MVVM.Model, Data.DB, Datasnap.DBClient, Test.Model.Detail;
+  System.SysUtils,
+  System.Classes,
+  MVVM.Model,
+  Data.DB,
+  Datasnap.DBClient,
+  Test.Model.Detail;
 
 type
   TTestModel = class(TModel)
